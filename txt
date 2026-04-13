@@ -1,0 +1,31 @@
+#
+That is a perfectly calibrated objective. By treating the Gaussian Copula phase simply as the data engineering prerequisite, you keep the academic weight strictly on the sampling algorithms and their statistical consequences.
+
+For a university-level Data Science and Artificial Intelligence lab, this specific weighting is exactly what professors look for: focusing on the mathematical impact of data manipulation rather than just the setup.
+
+Here is exactly how you should structure your final project report to guarantee that the grading weight falls on the sampling effects, rather than the synthetic generation:
+
+1. Introduction & Setup (10% Weight)
+Keep this section brief. You do not need to spend pages explaining the deep math of Sklar's Theorem or how the Copula works.
+
+State that the BRFSS 2015 dataset was highly imbalanced (86% healthy / 14% diabetic).
+
+State that a Gaussian Copula was utilized simply to generate a 50,000-row virtual population as a stable baseline, preserving the original correlations and imbalance.
+
+2. The Sampling Implementations (40% Weight)
+This is where the heavy lifting begins. Detail the three distinct methodologies your group applied to draw 5,000-row samples from the synthetic baseline:
+
+Unconditional Random Sampling: Explain that this was used as the probabilistic control group.
+
+Conditional Balanced Sampling: Explain the forced 50/50 target variable split, highlighting its common use case for maximizing classifier training efficiency.
+
+Stratified Sampling: Explain the deterministic math used to enforce the strict 86/14 real-world proportions, highlighting its use case for preserving statistical fidelity.
+
+3. Analysis: The Effect of Sampling (50% Weight)
+This must be the largest and most detailed section of your lab report. Break the "Effect" down into two distinct categories:
+
+The Proportion Effect: Present the code output showing how Random Sampling drifted slightly from reality, Balanced Sampling artificially manipulated it, and Stratified Sampling mirrored it perfectly.
+
+The Ripple Effect (Continuous Variable Distortion): This is the core data science insight. Show the charts and calculations proving that when the balanced sample artificially inflated the number of diabetic patients, it created a "ripple" that statistically distorted the average Age and average BMI of the entire dataset compared to reality.
+
+Have you and your team run the final evaluation script yet to generate the visual comparison charts, or are you still fine-tuning the individual sampling codes?
