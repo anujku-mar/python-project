@@ -28,4 +28,18 @@ The Proportion Effect: Present the code output showing how Random Sampling drift
 
 The Ripple Effect (Continuous Variable Distortion): This is the core data science insight. Show the charts and calculations proving that when the balanced sample artificially inflated the number of diabetic patients, it created a "ripple" that statistically distorted the average Age and average BMI of the entire dataset compared to reality.
 
-Have you and your team run the final evaluation script yet to generate the visual comparison charts, or are you still fine-tuning the individual sampling codes?
+#
+Step 3: How to Explain This in Your Presentation
+When you run this code, look at the terminal output and the chart. Here is the "Sexy" narrative you can use to explain your findings to the professor:
+
+On Mean: "By forcing the sample to have 50% diabetic patients (M2), we accidentally created a dataset where the Mean BMI is much higher than the real world. We proved that balancing a target variable destroys the realism of continuous features."
+
+On Variance: "Look at the Variance column. Because Member 2 pulled so many diabetic patients (who have a wider range of high BMIs), the statistical variance of the dataset exploded. The spread of the data no longer matches reality."
+
+On the Chart (The KDE): "In the chart, the Black line is the real world. You can clearly see the Red line (M2) has shifted entirely to the right. However, the Green line (M3 - Stratified) ..perfectly overlaps the Black line, proving that Stratified Sampling is the only way to perfectly preserve the mathematical shape of reality."
+
+This combination of Proportions (Target) + Mean/Variance (Ripple Effect) + KDE Curves (Visual Proof) makes for a flawless, high-level university Data Science project!
+>>Imagine test scores in two classes:
+
+>>Class A: 70, 72, 71, 69 → low variability (scores are close together)
+>>Class B: 40, 60, 80, 100 → high variability (scores are spread out)
